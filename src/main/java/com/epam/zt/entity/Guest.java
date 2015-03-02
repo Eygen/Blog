@@ -1,4 +1,7 @@
 package com.epam.zt.entity;
 
-public class Guest {
+import java.util.List;
+
+public class Guest extends BaseEntity {
+    List<Comment> commentList;
 }

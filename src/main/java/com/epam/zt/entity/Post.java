@@ -1,4 +1,9 @@
 package com.epam.zt.entity;
 
-public class Post {
+import java.util.List;
+
+public class Post extends Publication {
+    int like;
+    Author author;
+    List<Comment> commentList;
 }
