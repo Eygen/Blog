@@ -13,4 +13,6 @@ public class Blog implements Comparable<Blog> {
     public int compareTo(Blog o) {
         return creationDate.compareTo(o.creationDate);
     }
+
+
 }

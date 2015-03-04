@@ -8,6 +8,7 @@ public abstract class Publication implements Comparable<Publication> {
     private String description;
     private String body;
     private Date creationDate;
+    private User user;
 
     @Override
     public int compareTo(Publication o) {
