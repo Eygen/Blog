@@ -7,7 +7,7 @@ public class Blog implements Comparable<Blog> {
 
     private String title;
     private Date creationDate;
-    List<Post> postList;
+    private List<Post> postList;
 
     @Override
     public int compareTo(Blog o) {
