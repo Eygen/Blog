@@ -1,22 +1,31 @@
 package com.epam.zt.entity;
 
+import java.util.Date;
+import java.util.List;
+
 public class User extends BaseEntity {
     private String name;
     private String login;
     private String password;
     private String email;
     private Role role;
-
-    public User(String name, Role role) {
-        this.name = name;
-        this.role = role;
-    }
+    private Date registerDate;
+    private Date birthday;
+    private List<Post> postList;
+    private List<Comment> commentList;
 
     @Override
     public String toString() {
         return "User{" +
                 "name='" + name + '\'' +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
                 ", role=" + role +
+                ", registerDate=" + registerDate +
+                ", birthday=" + birthday +
+                ", postList=" + postList +
+                ", commentList=" + commentList +
                 '}';
     }
 
@@ -60,8 +69,35 @@ public class User extends BaseEntity {
         this.role = role;
     }
 
-    public User() {
-        super();
+    public Date getRegisterDate() {
+        return registerDate;
+    }
 
+    public void setRegisterDate(Date registerDate) {
+        this.registerDate = registerDate;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
+
+    public List<Post> getPostList() {
+        return postList;
+    }
+
+    public void setPostList(List<Post> postList) {
+        this.postList = postList;
+    }
+
+    public List<Comment> getCommentList() {
+        return commentList;
+    }
+
+    public void setCommentList(List<Comment> commentList) {
+        this.commentList = commentList;
     }
 }

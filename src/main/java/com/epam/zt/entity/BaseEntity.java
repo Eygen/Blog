@@ -1,12 +1,15 @@
 package com.epam.zt.entity;
 
-import java.util.Date;
 import java.util.UUID;
 
 public abstract class BaseEntity {
     private UUID uuid;
     private int id;
-    private Date creationDate;
+
+    public BaseEntity() {
+        super();
+        //uuid = UUID.randomUUID();
+    }
 
     public int getId() {
         return id;
@@ -24,14 +27,6 @@ public abstract class BaseEntity {
         this.uuid = uuid;
     }
 
-    public Date getCreationDate() {
-        return creationDate;
-    }
-
-    public void setCreationDate(Date creationDate) {
-        this.creationDate = creationDate;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -40,7 +35,7 @@ public abstract class BaseEntity {
         BaseEntity that = (BaseEntity) o;
 
         if (id != that.id) return false;
-        if (creationDate != null ? !creationDate.equals(that.creationDate) : that.creationDate != null) return false;
+        if (uuid != null ? !uuid.equals(that.uuid) : that.uuid != null) return false;
 
         return true;
     }

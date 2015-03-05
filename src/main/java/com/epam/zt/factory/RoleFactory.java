@@ -1,4 +1,6 @@
-package com.epam.zt.entity;
+package com.epam.zt.factory;
+
+import com.epam.zt.entity.Role;
 
 import java.util.Random;
 import java.util.UUID;
