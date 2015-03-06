@@ -16,8 +16,8 @@ public class Post extends Publication {
                 ", title=" + getTitle() +
                 ", body=" + getBody() +
                 ", views=" + views +
-                ", commentList=" + commentList +
-                ", tagList=" + tagList +
+                ", commentList=" + commentList.size() +
+                ", tagList=" + tagList.size() +
                 '}';
     }
 

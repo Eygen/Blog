@@ -19,8 +19,8 @@ public class Blog extends BaseEntity implements Comparable<Blog> {
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", creationDate=" + creationDate +
-                ", postList=" + postList +
-                ", tagList=" + tagList +
+                ", postList=" + postList.size() +
+                ", tagList=" + tagList.size() +
                 '}';
     }
 
